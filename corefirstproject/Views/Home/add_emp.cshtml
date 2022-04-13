@@ -1,0 +1,57 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@*<style>
+    h1 {
+        background-color: #ffd800
+    }
+
+    body {
+        background-color: seagreen
+    }
+</style>*@
+<div class="text-center">
+    <h1 class="p-3 mb-2 bg-danger text-white">
+        Add to Employee details
+    </h1>
+</div>
+
+
+@model corefirstproject.connetion.Employform
+
+<div class="row">
+    <div class="col-md-4">
+
+        <form asp-controller="Home" asp-action="add_emp"  method="post">
+            <input type="hidden" asp-for="Id" />
+            <div clas="form-group">
+                <label asp-for="Name" class="custom-control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div clas="form-group">
+                <label asp-for="Salary" class="custom-control-label"></label>
+                <input asp-for="Salary" class="form-control" />
+                <span asp-validation-for="Salary" class="text-danger"></span>
+            </div>
+
+
+            <div clas="form-group">
+                <label asp-for="Depart" class="custom-control-label"></label>
+                <input asp-for="Depart" class="form-control" />
+                <span asp-validation-for="Depart" class="text-danger"></span>
+            </div>
+
+            <div clas="form-group">
+                <label asp-for="City" class="custom-control-label"></label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div>
+                <input type="submit" value="Submit" class="btn btn-outline-success" />
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+﻿
+
+
+@model List<corefirstproject.connetion.Employform>
+    
+<table class="table table-striped">
+    <tr>
+        <th>id </th>
+        <th>NAME</th>
+        <th>salary</th>
+        <th>Depart</th>
+        <th>CITY</th>
+        <th>EDIT</th>
+        <th>DELETE</th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Salary</td>
+            <td>@item.Depart</td>
+            <td>@item.City</td>
+
+            <td><a asp-controller="Home" asp-action="Edit" asp-route-Id="@item.Id">EDIT</a></td>
+            <td><a asp-controller="Home" asp-action="delete" asp-route-Id="@item.Id">Delete</a></td>
+
+
+        </tr>
+
+    }
+    <h1  class="p-3 mb-2 bg-primary text-white"> Welcome to Cheru Employee List</h1>
+    <div>
+         <td <input type="submit" value="add_emp" class="btn btn-outline-success" /><a asp-controller="Home" asp-action="add_emp" asp-route-Id="id">Add new</a></td>
+    </div>
+
+
+</table>
